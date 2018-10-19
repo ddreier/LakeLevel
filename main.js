@@ -16,6 +16,7 @@ $(function () {
 function setWaterLevel(data) {
     var maxLevel = data.lakeOperatingRangeMax;
     var curLevel = data.records[0].value1;
+    var timestamp = new Date(data.records[0].dateTime);
 
     document.querySelector("#max-level-text").textContent = "Max Operating Level: " + maxLevel + " ft";
     document.querySelector("#water-level-text").textContent = "Current Level: " + curLevel + " ft";
@@ -31,4 +32,6 @@ function setWaterLevel(data) {
         var diff = (maxLevel - curLevel).toFixed(2);
         document.querySelector("#heading").textContent = "Nope, " + diff + " ft to full.";
     }
+
+    document.querySelector("#timestamp").textContent = "Latest data: " + timestamp.toLocaleString();
 }

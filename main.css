@@ -34,6 +34,14 @@ body {
     z-index: 50;
 }
 
+#timestamp {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(210, 210, 210, .75);
+    padding: .1em;
+}
+
 .level-text {
     /* font-weight: bold; */
     font-size: 2rem;
