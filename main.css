@@ -1,0 +1,77 @@
+body {
+    overflow: hidden;
+    font-family: Helvetica;
+}
+
+#max-level {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: black dashed;
+    z-index: 25;
+}
+
+#max-level-text {
+    float: right;
+}
+
+#water-level {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /* border-top: rgb(120,215,255) solid .6em; */
+    background-color: rgb(174,231,255);
+    z-index: 0;
+}
+
+#water-level-still {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+}
+
+.level-text {
+    /* font-weight: bold; */
+    font-size: 2rem;
+    background-color: rgba(210, 210, 210, .75);
+    padding: .1em;
+}
+
+.water {
+    animation: water 8s infinite;
+    background: linear-gradient(-2deg, #000046 10%, #1CB5E0); /* https://uigradients.com/#VisionsofGrandeur */
+}
+
+.water::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    background-repeat: repeat-x;
+    height: 10px;
+    background-size: 20px 20px;
+    background-image: radial-gradient(circle at 10px 15px, transparent 12px, white 13px);
+  }
+  
+  .water::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    background-repeat: repeat-x;
+    height: 15px;
+    background-size: 40px 20px;
+    background-image: radial-gradient(circle at 10px 0px, white 12px, transparent 13px);
+  }
+
+@keyframes water {
+    0% { transform: scale(1); }
+    65% { transform: scaleY(1.02); }
+    100% { transform: scale(1); }
+}
