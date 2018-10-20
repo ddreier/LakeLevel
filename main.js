@@ -1,5 +1,9 @@
 // Document Ready
 $(function () {
+    getData()
+});
+
+function getData() {
     var buster = Math.floor((Math.random() * 1000) + 1);
 
     // Get the data from LCRA
@@ -13,7 +17,9 @@ $(function () {
             setWaterLevel(data);
         }
     );
-});
+
+    setTimeout(getData, 1000 * 60 * 5); // Run again in 5 minutes
+}
 
 function setWaterLevel(data) {
     var maxLevel = data.lakeOperatingRangeMax;
