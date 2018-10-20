@@ -54,7 +54,7 @@ body {
     background: linear-gradient(-2deg, #000046 10%, #1CB5E0); /* https://uigradients.com/#VisionsofGrandeur */
 }
 
-.water::before {
+/* .water::before {
     content: "";
     position: absolute;
     left: 0;
@@ -64,22 +64,22 @@ body {
     height: 10px;
     background-size: 20px 20px;
     background-image: radial-gradient(circle at 10px 15px, transparent 12px, white 13px);
-  }
-  
-  .water::after {
+} */
+
+.water::after {
     content: "";
     position: absolute;
     left: 0;
     top: 0;
     right: 0;
     background-repeat: repeat-x;
-    height: 15px;
-    background-size: 40px 20px;
-    background-image: radial-gradient(circle at 10px 0px, white 12px, transparent 13px);
-  }
+    height: 25px;
+    background-size: 40px 40px;
+    background-image: radial-gradient(ellipse 60% 40% at 20px -5px, white 20px, transparent 21px);
+}
 
 @keyframes water {
     0% { transform: scale(1); }
-    65% { transform: scaleY(1.02); }
+    50% { transform: scaleY(1.02); }
     100% { transform: scale(1); }
 }
