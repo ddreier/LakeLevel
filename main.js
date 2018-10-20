@@ -1,7 +1,9 @@
 // Document Ready
 $(function () {
+    var buster = Math.floor((Math.random() * 1000) + 1);
+
     // Get the data from LCRA
-    $.getJSON("data.json",
+    $.getJSON("data.json?cb" + buster,
         function (data, textStatus, jqXHR) {
             console.log(data.siteName);
             console.log("Data as of " + data.records[0].dateTime);
