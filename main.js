@@ -29,7 +29,9 @@ function setWaterLevel(data) {
     document.querySelector("#max-level-text").textContent = "Max Operating Level: " + maxLevel + " ft";
     document.querySelector("#water-level-text").textContent = "Current Level: " + curLevel + " ft";
 
-    var ratio = (curLevel / maxLevel) * 85.0;
+    // Use -400 to make the bottom of the screen act like 400ft
+    // 681 feet is 80% of the screen
+    var ratio = ((curLevel - 400) / (maxLevel - 400)) * 80.0;
     console.log(ratio);
     document.querySelector("#water-level").style.height = ratio + "%";
     document.querySelector("#water-level-still").style.height = ratio + "%";

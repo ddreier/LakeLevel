@@ -50,7 +50,7 @@ body {
 }
 
 .water {
-    animation: water 8s infinite;
+    animation: water 12s infinite;
     background: linear-gradient(-2deg, #000046 10%, #1CB5E0); /* https://uigradients.com/#VisionsofGrandeur */
 }
 
