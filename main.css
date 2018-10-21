@@ -49,6 +49,16 @@ body {
     padding: .1em;
 }
 
+@media screen and (max-width: 768px) {
+    .level-text {
+        font-size: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+}
+
 .water {
     animation: water 12s infinite;
     background: linear-gradient(-2deg, #000046 10%, #1CB5E0); /* https://uigradients.com/#VisionsofGrandeur */
